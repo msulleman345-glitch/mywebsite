@@ -3,18 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Computer Project | Bright Business</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fc;
+            color: #333;
+        }
+
+        header {
+            background: #007bff;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+            border-bottom: 5px solid #FFD700;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .project-card {
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+
+        .gold-line {
+            width: 70px;
+            height: 4px;
+            background: #FFD700;
+            margin: 15px 0 25px;
+            border: none;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 22px;
+            background: #007bff;
+            color: white;
+            border: 2px solid #FFD700;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #007bff;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+            border-top: 4px solid #FFD700;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            .project-card {
+                margin: 20px 15px;
+                padding: 22px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Computer Project</h1>
+    <header>
+        <h1>💻 Computer Project</h1>
+        <p>Bright Business — Creative Digital Solutions</p>
+    </header>
 
-    <p>Welcome to our Computer project!</p>
+    <main class="project-card">
+        <h2>Welcome to Our Computer Project</h2>
+        <hr class="gold-line">
 
-    <h2>Project Details</h2>
-    <p>We create modern and responsive websites for computers and mobile devices.</p>
+        <p>
+            We create clean, modern and professional websites
+            for businesses and individuals.
+        </p>
 
-    <a href="index.html">Back to Home</a>
+        <h2>Project Details</h2>
+
+        <p>
+            Our websites are designed to work smoothly on computers,
+            tablets and mobile phones, with easy navigation
+            and an attractive user experience.
+        </p>
+
+        <a href="index.html" class="back-button">
+            ← Back to Home
+        </a>
+    </main>
+
+    <footer>
+        <p>© 2026 Bright Business. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
