@@ -43,6 +43,31 @@
             color: #b8d4ff;
         }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: auto;
+    color: #ffffff !important;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo-icon {
+    color: #FFD700;
+    font-size: 30px;
+}
+
+@media (max-width: 600px) {
+    .logo {
+        width: 100%;
+        justify-content: center;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+}
+
         .card {
             max-width: 900px;
             margin: 0 auto;
@@ -319,6 +344,10 @@
 <body>
 
     <nav class="navbar">
+        <a href="#home" class="logo">
+    <span class="logo-icon">☀</span>
+    <span>Bright Business</span>
+</a>
         <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#work">Our Work</a>
