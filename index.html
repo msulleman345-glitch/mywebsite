@@ -7,508 +7,478 @@
     <title>Bright Business</title>
 
     <style>
-        body 
-         {
-        margin: 0;
-        padding: 60px 20px;
-        font-family: Arial, sans-serif;
-        background: #f0f4f8;
-        text-align: center;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    .card {
-        max-width: 600px;
-        margin: auto;
-        padding: 40px 25px;
-        background: white;
-        border-radius: 16px;
-        box-shadow: 0 8px 25px #00000015;
-    }
+        body {
+            margin: 0;
+            padding: 25px 16px;
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            color: #222;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+        }
 
-    h1 {
-        color: #174ea6;
-        font-size: 36px;
-    }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            padding: 18px;
+            background: #174ea6;
+            border-radius: 12px;
+            margin: 0 auto 25px;
+            max-width: 900px;
+        }
 
-    h2 {
-        color: #222222;
-    }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    p {
-        color: #555555;
-        line-height: 1.7;
-    }
+        .navbar a:hover {
+            color: #b8d4ff;
+        }
 
-    button {
-        background: #25D366;
-        color: white;
-        border: none;
-        padding: 14px 24px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 16px;
-    }
+        .card {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 28px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px #00000015;
+        }
 
-    button:hover {
-        background: #0d326d;
-    }
+        h1 {
+            color: #174ea6;
+            font-size: 36px;
+        }
 
-.card p {
-    background: #f0f4f8;
-    padding: 12px;
-    border-radius: 8px;
-    margin: 10px 0;
-}
-h1 {
-    color: #174ea6;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
+        h2 {
+            color: #174ea6;
+        }
 
-h2 {
-    color: #174ea6;
-}
+        p {
+            line-height: 1.7;
+        }
 
-footer {
-    background: #174ea6;
-    color: white;
-    text-align: center;
-    padding: 18px;
-    margin-top: 30px;
-    border-radius: 12px;
-    font-size: 14px;
-}
+        .welcome-banner {
+            background: linear-gradient(135deg, #174ea6, #4285f4);
+            color: #fff;
+            padding: 30px 18px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+        }
 
-footer p {
-    margin: 0;
-    background: transparent;
-    border: none;
-    color: white;
-}
+        .welcome-banner h2,
+        .welcome-banner p {
+            color: #fff;
+        }
 
-}
-.card {
-    border-radius: 16px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
-    padding: 30px;
-    max-width: 800px;
-    margin: 30px auto;
-}
-.card p {
-    background: #ffffff;
-    border: 1px solid #dbe4f0;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 12px 0;
-    transition: 0.3s;
-}
+        .welcome-banner h2 {
+            font-size: 28px;
+        }
 
-.card p:hover {
-    background: #eaf2ff;
-    border-color: #174ea6;
-}
-button {
-    background: #25D366;
-    color: white;
-    padding: 14px 28px;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
+        .welcome-banner p {
+            font-size: 16px;
+        }
 
-button:hover {
-    background: #1da851;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-}
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 18px;
-    background: #174ea6;
-    border-radius: 12px;
-    margin-bottom: 25px;
-}
+        button {
+            border: none;
+            border-radius: 25px;
+            padding: 12px 22px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-}
+        button:hover {
+            transform: translateY(-2px);
+        }
 
-.navbar a:hover {
-    color: #b8d4ff;
-}
-@media (max-width: 600px) {
-    .navbar {
-        gap: 12px;
-        padding: 14px 8px;
-        flex-wrap: wrap;
-    }
+        .welcome-button {
+            background: #fff;
+            color: #174ea6;
+            margin: 6px;
+        }
 
-    .navbar a {
-        font-size: 14px;
-    }
+        .welcome-button:hover {
+            background: #eaf2ff;
+        }
 
-    .card {
-        padding: 20px;
-        margin: 15px auto;
-    }
+        #welcome-message {
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
 
-    h1 {
-        font-size: 28px;
-    }
-}
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin: 20px 0 30px;
+        }
 
-.welcome-banner {
-    background: linear-gradient(135deg, #174ea6, #4285f4);
-    color: white;
-    padding: 35px 20px;
-    border-radius: 14px;
-    text-align: center;
-    margin-bottom: 25px;
-}
+        .service-card,
+        .portfolio-card,
+        .why-item {
+            background: #fff;
+            border: 1px solid #dbe4f0;
+            border-radius: 12px;
+            padding: 16px;
+            transition: 0.3s;
+        }
 
-.welcome-banner h2 {
-    color: white;
-    font-size: 30px;
-    margin-bottom: 12px;
-}
+        .service-card:hover,
+        .portfolio-card:hover,
+        .why-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px #174ea61a;
+        }
 
-.welcome-banner p {
-    color: white;
-    background: transparent;
-    border: none;
-    font-size: 17px;
-    line-height: 1.6;
-}
+        .service-card h3,
+        .portfolio-card h3,
+        .why-item h3 {
+            color: #174ea6;
+            font-size: 16px;
+        }
 
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin: 20px 0;
-}
+        .service-card p,
+        .portfolio-card p,
+        .why-item p {
+            color: #444;
+            font-size: 14px;
+            line-height: 1.6;
+        }
 
-.service-card {
-    background: #ffffff;
-    border: 1px solid #dbe4f0;
-    border-radius: 14px;
-    padding: 22px 15px;
-    text-align: center;
-    transition: 0.3s ease;
-}
+        .portfolio,
+        .why-us {
+            margin: 30px 0;
+            padding: 22px;
+            border-radius: 14px;
+        }
 
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(23, 78, 166, 0.15);
-    border-color: #174ea6;
-}
+        .portfolio {
+            background: #f0f6ff;
+        }
 
-.service-card h3 {
-    color: #174ea6;
-    font-size: 18px;
-    margin-bottom: 12px;
-}
+        .why-us {
+            background: #f8fbff;
+            border: 1px solid #dbe4f0;
+        }
 
-.service-card p {
-    color: #444444;
-    line-height: 1.6;
-    font-size: 14px;
-    margin: 0;
-}
+        .portfolio-intro {
+            color: #444;
+            font-size: 14px;
+        }
 
-@media (max-width: 600px) {
-    .services-container {
-        grid-template-columns: 1fr;
-    }
-}
+        .portfolio-card {
+            margin: 14px 0;
+        }
 
-footer {
-    background: #174ea6;
-    color: white;
-    text-align: center;
-    padding: 18px;
-    margin-top: 30px;
-    border-radius: 12px;
-    font-size: 14px;
-}
+        .portfolio-card span {
+            color: #174ea6;
+            font-size: 12px;
+            font-weight: bold;
+        }
 
-footer p {
-    margin: 0;
-    background: transparent;
-    border: none;
-    color: white;
-}
+        .project-button {
+            display: inline-block;
+            background: #174ea6;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
 
-footer p {
-    background: transparent !important;
-    color: white !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
+        .project-button:hover {
+            background: #0d3678;
+        }
 
-/* Service cards ko compact banayein */
-.service-card {
-    padding: 15px 10px;
-    border-radius: 12px;
-}
+        .contact-button {
+            background: #25D366;
+            color: #fff;
+            margin: 10px;
+        }
 
-.service-card h3 {
-    font-size: 16px;
-}
+        .contact-button:hover {
+            background: #1da851;
+        }
 
-.service-card p {
-    font-size: 13px;
-    padding: 0;
-    margin: 0;
-}
+        footer {
+            max-width: 900px;
+            margin: 25px auto 0;
+            padding: 18px;
+            background: #174ea6;
+            color: #fff;
+            border-radius: 12px;
+            font-size: 14px;
+        }
 
-/* Footer ke text ka white background hatayein */
-footer p {
-    background: transparent !important;
-    color: white !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
+        footer p {
+            color: #fff;
+            margin: 0;
+        }
 
-.why-us {
-    background: #f8fbff;
-    padding: 22px;
-    margin: 25px 0;
-    border-radius: 14px;
-    border: 1px solid #dbe4f0;
-}
+        /* Dark Mode */
+        body.dark-mode {
+            background: #121212;
+            color: #f5f5f5;
+        }
 
-.why-us h2 {
-    text-align: center;
-    color: #174ea6;
-    margin-bottom: 20px;
-}
+        .dark-mode .card {
+            background: #1e1e1e;
+        }
 
-.why-item {
-    background: white;
-    padding: 14px;
-    margin: 12px 0;
-    border-radius: 10px;
-    border: 1px solid #dbe4f0;
-}
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode #contact,
+        .dark-mode .portfolio-intro,
+        .dark-mode .card > p {
+            color: #f5f5f5;
+        }
 
-.why-item h3 {
-    color: #174ea6;
-    font-size: 16px;
-    margin: 0 0 8px;
-}
+        .dark-mode .portfolio {
+            background: #1b1b1b;
+        }
 
-.why-item p {
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-    color: #444;
-    font-size: 14px;
-    line-height: 1.6;
-}
+        .dark-mode .why-us {
+            background: #1b1b1b;
+            border-color: #444;
+        }
 
-.portfolio {
-    margin: 30px 0;
-    padding: 22px;
-    background: #f0f6ff;
-    border-radius: 14px;
-}
+        .dark-mode .service-card,
+        .dark-mode .portfolio-card,
+        .dark-mode .why-item {
+            background: #252525;
+            border-color: #444;
+        }
 
-.portfolio h2 {
-    text-align: center;
-    color: #174ea6;
-    margin-bottom: 12px;
-}
+        .dark-mode .service-card h3,
+        .dark-mode .portfolio-card h3,
+        .dark-mode .why-item h3,
+        .dark-mode .portfolio-card span {
+            color: #8ab4f8;
+        }
 
-.portfolio-intro {
-    text-align: center;
-    color: #444;
-    font-size: 14px;
-    line-height: 1.6;
-    background: transparent;
-    border: none;
-    padding: 0;
-}
+        .dark-mode .service-card p,
+        .dark-mode .portfolio-card p,
+        .dark-mode .why-item p {
+            color: #f5f5f5;
+        }
 
-.portfolio-card {
-    background: white;
-    border: 1px solid #dbe4f0;
-    border-radius: 12px;
-    padding: 18px;
-    margin: 14px 0;
-    transition: 0.3s ease;
-}
+        .dark-mode .welcome-banner h2,
+        .dark-mode .welcome-banner p {
+            color: #fff;
+        }
 
-.portfolio-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(23, 78, 166, 0.12);
-}
+        @media (max-width: 600px) {
+            body {
+                padding: 14px 10px;
+            }
 
-.portfolio-card h3 {
-    color: #174ea6;
-    font-size: 17px;
-    margin: 0 0 10px;
-}
+            .navbar {
+                gap: 14px;
+                padding: 14px 8px;
+            }
 
-.portfolio-card p {
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin: 0 0 12px;
-    color: #444;
-    font-size: 14px;
-    line-height: 1.6;
-}
+            .navbar a {
+                font-size: 14px;
+            }
 
-.portfolio-card span {
-    color: #174ea6;
-    font-size: 12px;
-    font-weight: bold;
-}
+            .card {
+                padding: 16px;
+            }
 
-.project-button {
-    display: inline-block;
-    background: #174ea6;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    transition: 0.3s ease;
-}
+            h1 {
+                font-size: 28px;
+            }
 
-.project-button:hover {
-    background: #0d3678;
-    transform: translateY(-2px);
-}
+            .welcome-banner h2 {
+                font-size: 24px;
+            }
 
-</style>
-<script>
-    function contactUs() {
-        alert("Thank you for contacting us!");
-    }
-</script>
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio,
+            .why-us {
+                padding: 14px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <nav class="navbar">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a> 
-    <a href="#work">Our Work</a>
-    <a href="#contact">Contact</a>
-</nav>  
-<div class="card" id="home">    
-<div class="welcome-banner">
-    <h2>Grow Your Business With Us!</h2>
-    <p>We create modern websites to help your business grow online.</p>
-</div>
 
-    <h1>Bright Business</h1>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <p>Welcome to our business website!</p>
+    <main class="card" id="home">
 
-    <p>We provide quality services to help your business grow.</p>
+        <div class="welcome-banner">
+            <h2>Grow Your Business With Us!</h2>
+            <p>We create modern websites to help your business grow online.</p>
 
-    
-<h2 id="services">Our Services</h2>
+            <button class="welcome-button" onclick="showMessage()">
+                Click Me
+            </button>
 
-<div class="services-container">
-    <div class="service-card">
-        <h3>🌐 Website Design</h3>
-        <p>Modern and responsive websites for your business.</p>
-    </div>
+            <button class="welcome-button" id="theme-button"
+                    onclick="toggleDarkMode()">
+                🌙 Dark Mode
+            </button>
 
-    <div class="service-card">
-        <h3>📱 Digital Marketing</h3>
-        <p>Reach more customers and grow your online presence.</p>
-    </div>
+            <p id="welcome-message" aria-live="polite"></p>
+        </div>
 
-    <div class="service-card">
-        <h3>💼 Business Consulting</h3>
-        <p>Practical ideas to help your business grow.</p>
-    </div>
-</div>
+        <h1>Bright Business</h1>
+        <p>Welcome to our business website!</p>
+        <p>We provide quality services to help your business grow.</p>
 
+        <section>
+            <h2 id="services">Our Services</h2>
 
-<section class="portfolio" id="work">
-    <h2>Our Work</h2>
-    <p class="portfolio-intro">
-        Here are some examples of the websites we can create for businesses.
-    </p>
+            <div class="services-container">
+                <div class="service-card">
+                    <h3>🌐 Website Design</h3>
+                    <p>Modern and responsive websites for your business.</p>
+                </div>
 
-    
-<div class="portfolio-card">
-    <h3>🌐 Business Website</h3>
-    <p>A clean and professional website for a small business.</p>
-    <span>HTML • CSS</span>
-    <br><br>
-    <a href="https://msulleman345-glitch.github.io/mywebsite/" target="_blank" rel="noopener noreferrer" class="project-button">View Project</a>
-</div>
+                <div class="service-card">
+                    <h3>📱 Digital Marketing</h3>
+                    <p>Reach more customers and grow your online presence.</p>
+                </div>
 
+                <div class="service-card">
+                    <h3>💼 Business Consulting</h3>
+                    <p>Practical ideas to help your business grow.</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="portfolio-card">
-        <h3>📱 Mobile-Friendly Website</h3>
-        <p>A website designed to work smoothly on mobile phones.</p>
-        <span>Responsive Design</span>
-    
-<br><br>
-<a href="https://msulleman345-glitch.github.io/mywebsite/" target="_blank" rel="noopener noreferrer" class="project-button">View Project</a>
+        <section class="portfolio" id="work">
+            <h2>Our Work</h2>
+            <p class="portfolio-intro">
+                Here are some examples of the websites we can create for businesses.
+            </p>
 
-    </div>
+            <div class="portfolio-card">
+                <h3>🌐 Business Website</h3>
+                <p>A clean and professional website for a small business.</p>
+                <span>HTML • CSS</span>
+                <br><br>
+                <a href="https://msulleman345-glitch.github.io/mywebsite/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="project-button">View Project</a>
+            </div>
 
-    <div class="portfolio-card">
-        <h3>🛍️ Online Store Design</h3>
-        <p>A sample layout for showcasing products and services.</p>
-        <span>Web Design</span>
-    
-<br><br>
-<a href="https://msulleman345-glitch.github.io/mywebsite/" target="_blank" rel="noopener noreferrer" class="project-button">View Project</a>
+            <div class="portfolio-card">
+                <h3>📱 Mobile-Friendly Website</h3>
+                <p>A website designed to work smoothly on mobile phones.</p>
+                <span>Responsive Design</span>
+                <br><br>
+                <a href="https://msulleman345-glitch.github.io/mywebsite/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="project-button">View Project</a>
+            </div>
 
-    </div>
-</section>
+            <div class="portfolio-card">
+                <h3>🛍️ Online Store Design</h3>
+                <p>A sample layout for showcasing products and services.</p>
+                <span>Web Design</span>
+                <br><br>
+                <a href="https://msulleman345-glitch.github.io/mywebsite/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="project-button">View Project</a>
+            </div>
+        </section>
 
-<h2 id="contact">Contact Us</h2>
-<section class="why-us">
-    <h2>Why Choose Us?</h2>
+        <section class="why-us">
+            <h2>Why Choose Us?</h2>
 
-    <div class="why-item">
-        <h3>⭐ Quality Service</h3>
-        <p>We focus on delivering quality work for every client.</p>
-    </div>
+            <div class="why-item">
+                <h3>⭐ Quality Service</h3>
+                <p>We focus on delivering quality work for every client.</p>
+            </div>
 
-    <div class="why-item">
-        <h3>💼 Professional Team</h3>
-        <p>We work with care to support your business goals.</p>
-    </div>
+            <div class="why-item">
+                <h3>💼 Professional Team</h3>
+                <p>We work with care to support your business goals.</p>
+            </div>
 
-    <div class="why-item">
-        <h3>🤝 Customer Satisfaction</h3>
-        <p>Your needs and satisfaction are important to us.</p>
-    </div>
-</section>
-<p>Have a question? Contact us on WhatsApp.</p>
+            <div class="why-item">
+                <h3>🤝 Customer Satisfaction</h3>
+                <p>Your needs and satisfaction are important to us.</p>
+            </div>
+        </section>
 
+        <section>
+            <h2 id="contact">Contact Us</h2>
+            <p>Have a question? Contact us on WhatsApp.</p>
 
+            <a href="https://wa.me/923233955776?text=Hello%2C%20I%20am%20interested%20in%20your%20website%20design%20services."
+               target="_blank" rel="noopener noreferrer">
+                <button class="contact-button">Contact Us on WhatsApp</button>
+            </a>
+        </section>
 
-<a href="https://wa.me/923233955776?text=Hello%2C%20I%20am%20interested%20in%20your%20website%20design%20services."
-   target="_blank"
-   rel="noopener noreferrer">
-    <button>Contact Us on WhatsApp</button>
-</a>
+    </main>
 
+    <footer>
+        <p>© 2026 Bright Business. All rights reserved.</p>
+    </footer>
 
-<footer>
-    <p>© 2026 Bright Business. All rights reserved.</p>
-</footer>
+    <script>
+        let clickCount = 0;
 
-</div>
+        function showMessage() {
+            clickCount++;
+
+            const message = document.getElementById('welcome-message');
+
+            if (clickCount === 1) {
+                message.innerText = 'Welcome to Bright Business!';
+            } else {
+                message.innerText = 'Thank you for visiting us!';
+            }
+        }
+
+        function updateThemeButton() {
+            const button = document.getElementById('theme-button');
+            const isDark = document.body.classList.contains('dark-mode');
+
+            button.innerText = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+
+            const isDark = document.body.classList.contains('dark-mode');
+
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+            updateThemeButton();
+        }
+
+        // Restore the saved theme when the page opens.
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        updateThemeButton();
+    </script>
+
+</body>
+</html>
