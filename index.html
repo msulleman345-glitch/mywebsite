@@ -65,6 +65,15 @@
            sunPulse 2s ease-in-out infinite;
 }
 
+.logo-icon {
+    filter: drop-shadow(0 0 6px gold);
+    transition: filter 0.3s ease;
+}
+
+.logo-icon:hover {
+    filter: drop-shadow(0 0 14px gold);
+}
+
 @keyframes sunRotate {
     from {
         transform: rotate(0deg);
@@ -360,7 +369,16 @@
                 padding: 14px;
             }
         }
-    </style>
+   
+@media (prefers-reduced-motion: reduce) {
+    .logo-icon {
+        animation: none !important;
+        transition: none !important;
+        filter: none;
+    }
+}
+
+   </style>
 </head>
 
 <body>
