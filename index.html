@@ -70,9 +70,22 @@ h2 {
 }
 
 footer {
-    color: #666;
-    font-size: 14px;
+    background: #174ea6;
+    color: white;
+    text-align: center;
+    padding: 18px;
     margin-top: 30px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+    background: transparent;
+    border: none;
+    color: white;
+}
+
 }
 .card {
     border-radius: 16px;
@@ -174,6 +187,65 @@ button:hover {
     font-size: 17px;
     line-height: 1.6;
 }
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.service-card {
+    background: #ffffff;
+    border: 1px solid #dbe4f0;
+    border-radius: 14px;
+    padding: 22px 15px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(23, 78, 166, 0.15);
+    border-color: #174ea6;
+}
+
+.service-card h3 {
+    color: #174ea6;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #444444;
+    line-height: 1.6;
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    background: #174ea6;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+    background: transparent;
+    border: none;
+    color: white;
+}
+
 </style>
 <script>
     function contactUs() {
@@ -199,21 +271,33 @@ button:hover {
 
     <p>We provide quality services to help your business grow.</p>
 
-    <h2 id="services">Our Services</h2>
+    
+<h2 id="services">Our Services</h2>
 
-    <p>Website Design</p>
-    <p>Digital Marketing</p>
-    <p>Business Consulting</p>
+<div class="services-container">
+    <div class="service-card">
+        <h3>🌐 Website Design</h3>
+        <p>Modern and responsive websites for your business.</p>
+    </div>
 
+    <div class="service-card">
+        <h3>📱 Digital Marketing</h3>
+        <p>Reach more customers and grow your online presence.</p>
+    </div>
+
+    <div class="service-card">
+        <h3>💼 Business Consulting</h3>
+        <p>Practical ideas to help your business grow.</p>
+    </div>
+</div>
 <h2 id="contact">Contact Us</h2>
 <p>Have a question? Contact us on WhatsApp.</p>
+
+<a href="https://wa.me/923233955776?text=Hello%2C%20I%20am%20interested%20in%20your%20website%20design%20services."
+   target="_blank"
+   rel="noopener noreferrer">
+    <button>Contact Us on WhatsApp</button>
 </a>
-
-<h2>Our Services</h2>
-
-<p>Website Design</p>
-<p>Website Development</p>
-<p>Website Maintenance</p>
 
 
 <footer>
