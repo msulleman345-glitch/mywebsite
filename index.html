@@ -317,6 +317,65 @@ footer p {
     line-height: 1.6;
 }
 
+.portfolio {
+    margin: 30px 0;
+    padding: 22px;
+    background: #f0f6ff;
+    border-radius: 14px;
+}
+
+.portfolio h2 {
+    text-align: center;
+    color: #174ea6;
+    margin-bottom: 12px;
+}
+
+.portfolio-intro {
+    text-align: center;
+    color: #444;
+    font-size: 14px;
+    line-height: 1.6;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.portfolio-card {
+    background: white;
+    border: 1px solid #dbe4f0;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 14px 0;
+    transition: 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(23, 78, 166, 0.12);
+}
+
+.portfolio-card h3 {
+    color: #174ea6;
+    font-size: 17px;
+    margin: 0 0 10px;
+}
+
+.portfolio-card p {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0 0 12px;
+    color: #444;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.portfolio-card span {
+    color: #174ea6;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 </style>
 <script>
     function contactUs() {
@@ -327,7 +386,8 @@ footer p {
 <body>
   <nav class="navbar">
     <a href="#home">Home</a>
-    <a href="#services">Services</a>
+    <a href="#services">Services</a> 
+    <a href="#work">Our Work</a>
     <a href="#contact">Contact</a>
 </nav>  
 <div class="card" id="home">    
@@ -361,6 +421,33 @@ footer p {
         <p>Practical ideas to help your business grow.</p>
     </div>
 </div>
+
+
+<section class="portfolio" id="work">
+    <h2>Our Work</h2>
+    <p class="portfolio-intro">
+        Here are some examples of the websites we can create for businesses.
+    </p>
+
+    <div class="portfolio-card">
+        <h3>🌐 Business Website</h3>
+        <p>A clean and professional website for a small business.</p>
+        <span>HTML • CSS</span>
+    </div>
+
+    <div class="portfolio-card">
+        <h3>📱 Mobile-Friendly Website</h3>
+        <p>A website designed to work smoothly on mobile phones.</p>
+        <span>Responsive Design</span>
+    </div>
+
+    <div class="portfolio-card">
+        <h3>🛍️ Online Store Design</h3>
+        <p>A sample layout for showcasing products and services.</p>
+        <span>Web Design</span>
+    </div>
+</section>
+
 <h2 id="contact">Contact Us</h2>
 <section class="why-us">
     <h2>Why Choose Us?</h2>
