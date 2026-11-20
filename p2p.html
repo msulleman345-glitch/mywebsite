@@ -1,22 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>P2P Pizza2Potato | Badin</title>
-<meta name="description" content="P2P Pizza2Potato restaurant demo website in Badin, Sindh.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17110f">
+<title>P2P Pizza2Potato | Pizza, Burgers & BBQ in Badin</title>
+<meta name="description" content="Explore the P2P Pizza2Potato menu in Badin: pizza, burgers, BBQ, karahi, platters, deals, pasta and more. Call for delivery and orders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;background:#fff8f0;color:#251912;line-height:1.65}a{text-decoration:none;color:inherit}.wrap{width:min(1100px,90%);margin:auto}header{background:#21150f;color:white;position:sticky;top:0;z-index:5}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:800;font-size:21px}.logo span{color:#ff7845}.nav a:last-child{background:#ef6333;padding:10px 16px;border-radius:30px}.hero{background:linear-gradient(110deg,#21150f,#4a2418);color:white}.heroGrid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;padding:75px 0}.eyebrow{color:#ffc45c;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800}.hero h1{font:800 clamp(45px,6vw,70px)/1.05 "Playfair Display",serif;margin:18px 0}.hero p{color:#e0cfc3;margin-bottom:25px;max-width:480px}.btn{display:inline-block;padding:13px 20px;border-radius:30px;background:#ef6333;color:white;font-weight:800}.photo{height:360px;width:100%;object-fit:cover;border-radius:28px}.quick{background:#ef6333;color:white}.quickGrid{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}.quickGrid div{padding:20px 10px;border-right:1px solid #ffffff44}.quickGrid div:last-child{border:0}section{padding:75px 0}.head{text-align:center;max-width:650px;margin:0 auto 35px}.head h2{font:800 40px "Playfair Display",serif;margin:10px 0}.head p,.muted{color:#806e62}.menuBox{max-width:720px;margin:auto;background:#2a1b13;color:white;padding:35px;border-radius:22px;text-align:center}.menuBox h3{font:700 28px "Playfair Display";margin:12px}.menuBox p{color:#dfcfc2;margin-bottom:20px}.infoGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.info{background:white;padding:27px;border-radius:18px}.info h3{margin-bottom:8px}.info p{color:#806e62;margin-bottom:12px}.info a{color:#d95024;font-weight:800}.map{width:100%;height:300px;border:0;border-radius:18px;margin-top:22px}footer{background:#21150f;color:white;padding:28px 0;text-align:center}footer p{color:#c9b7a9;font-size:13px;margin-top:5px}
-@media(max-width:700px){.heroGrid{grid-template-columns:1fr;padding:55px 0}.photo{height:260px}.quickGrid{grid-template-columns:1fr}.quickGrid div{border-right:0;border-bottom:1px solid #ffffff44}.infoGrid{grid-template-columns:1fr}.head h2{font-size:33px}}
+:root{--dark:#17110f;--dark2:#241915;--yellow:#ffd21f;--orange:#ef6b35;--cream:#fff9ee;--muted:#bdb0a7;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{font-family:"DM Sans",sans-serif;background:var(--cream);color:#211713;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#17110ff2;backdrop-filter:blur(12px);color:white;border-bottom:1px solid #ffffff18}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font:700 25px Oswald,sans-serif;letter-spacing:.5px}.logo span{color:var(--yellow)}
+.navlinks{display:flex;align-items:center;gap:25px;font-size:13px;font-weight:800}
+.navlinks a:hover{color:var(--yellow)}
+.navbtn,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:8px;padding:12px 18px;font-weight:800}
+.navbtn,.primary{background:var(--yellow);color:#17110f}
+.toggle{display:none;background:none;border:0;color:white;font-size:27px}
+.hero{background:radial-gradient(circle at 78% 25%,#ef6b3530,transparent 28%),linear-gradient(120deg,#17110f,#392018);color:white;overflow:hidden}
+.heroGrid{display:grid;grid-template-columns:1fr .9fr;align-items:center;gap:55px;padding:88px 0;min-height:560px}
+.kicker{color:var(--yellow);font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase}
+h1,h2,h3{font-family:Oswald,sans-serif;text-transform:uppercase}
+.hero h1{font-size:clamp(48px,7vw,82px);line-height:1.02;letter-spacing:.3px;margin:16px 0}
+.hero h1 span{color:var(--yellow)}
+.hero p{color:#e4d8d0;max-width:570px;font-size:16px;margin-bottom:26px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.primary:hover,.navbtn:hover,.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.outline{border:1px solid #ffffff60;color:white}
+.heroVisual{position:relative}
+.heroVisual img{width:100%;height:370px;object-fit:cover;border-radius:18px;border:5px solid #ffffff18;box-shadow:0 25px 70px #0008}
+.heroStamp{position:absolute;bottom:-18px;left:-18px;background:var(--yellow);color:#17110f;padding:13px 18px;border-radius:10px;font:700 21px Oswald;transform:rotate(-3deg)}
+.highlights{background:var(--yellow);color:#17110f}
+.highlightGrid{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
+.highlight{padding:20px 12px;border-right:1px solid #17110f25}
+.highlight:last-child{border:0}
+.highlight strong{display:block;font:700 20px Oswald;text-transform:uppercase}
+.highlight span{font-size:12px;font-weight:700}
+section{padding:82px 0}
+.sectionHead{text-align:center;max-width:720px;margin:0 auto 38px}
+.sectionHead .kicker{color:#bd4e27}
+.sectionHead h2{font-size:clamp(34px,4vw,48px);line-height:1.1;margin:9px 0}
+.sectionHead p{color:#76675e}
+.menuSection{background:#fff9ee}
+.menuGrid{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start}
+.menuCard{background:white;border:1px solid #eadfd5;border-radius:16px;padding:14px;box-shadow:0 12px 35px #29170d0b}
+.menuCard img{display:block;width:100%;height:auto;border-radius:9px;background:#211713}
+.menuCaption{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px 4px 3px;font-weight:800}
+.menuCaption span{color:#bd4e27;font-size:12px}
+.zoomNote{text-align:center;color:#806f64;font-size:13px;margin-top:20px}
+.deals{background:var(--dark);color:white}
+.deals .sectionHead p{color:#c7b8ad}
+.dealGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.deal{background:#2a1c16;border:1px solid #ffffff17;border-radius:14px;padding:23px}
+.dealLabel{display:inline-block;background:var(--yellow);color:#17110f;padding:4px 10px;border-radius:4px;font:700 14px Oswald}
+.deal h3{font-size:24px;margin:12px 0 8px}
+.deal p{color:#d5c7bd;font-size:14px;min-height:70px}
+.deal strong{display:block;color:var(--yellow);font:700 32px Oswald;margin-top:12px}
+.deal a{display:inline-block;margin-top:12px;color:var(--yellow);font-weight:800;font-size:13px}
+.info{background:#f1e5d8}
+.infoGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.infoCard{background:white;border-radius:15px;padding:27px;border:1px solid #eadfd5}
+.infoCard h3{font-size:22px;margin-bottom:8px}
+.infoCard p{color:#76675e;font-size:14px;margin-bottom:8px}
+.infoCard a{color:#c14d26;font-weight:800}
+.contactNumbers{display:grid;gap:7px;margin-top:10px}
+.map{width:100%;height:300px;border:0;border-radius:15px;margin-top:22px}
+.cta{background:linear-gradient(110deg,#e95e2e,#a9361b);color:white;text-align:center}
+.cta h2{font-size:clamp(34px,5vw,50px);margin-bottom:9px}
+.cta p{color:#ffe4d7;margin-bottom:20px}
+.cta .btn{background:var(--yellow);color:#17110f}
+footer{background:#100c0a;color:white;padding:30px 0;text-align:center}
+footer p{color:#a99a90;font-size:12px;margin-top:6px}
+.floatOrder{position:fixed;right:18px;bottom:18px;z-index:15;background:#20bd69;color:white;border-radius:40px;padding:13px 18px;font-weight:800;box-shadow:0 8px 25px #0004}
+@media(max-width:800px){
+ .navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#17110f;padding:20px 5%;flex-direction:column;align-items:stretch;gap:16px}
+ .navlinks.show{display:flex}.toggle{display:block}
+ .heroGrid{grid-template-columns:1fr;padding:65px 0;gap:35px}.heroVisual img{height:300px}
+ .dealGrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+ section{padding:62px 0}.highlightGrid{grid-template-columns:1fr}
+ .highlight{border-right:0;border-bottom:1px solid #17110f25;padding:14px}
+ .menuGrid,.infoGrid,.dealGrid{grid-template-columns:1fr}
+ .hero h1{font-size:52px}.heroVisual img{height:245px}.heroStamp{left:5px}
+ .menuCaption{font-size:13px}.floatOrder{right:10px;bottom:10px}
+}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="logo" href="#home">P2P <span>Pizza2Potato</span></a><a href="tel:+92297870606">Call Restaurant</a></div></header>
+<header>
+ <div class="wrap nav">
+  <a class="logo" href="#home">P2P <span>PIZZA2POTATO</span></a>
+  <button class="toggle" id="toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav class="navlinks" id="navlinks">
+   <a href="#home">HOME</a><a href="#menu">MENU</a><a href="#deals">DEALS</a><a href="#visit">LOCATION</a>
+   <a class="navbtn" href="tel:+92297870606">CALL TO ORDER</a>
+  </nav>
+ </div>
+</header>
 <main>
-<section class="hero" id="home"><div class="wrap heroGrid"><div><div class="eyebrow">Welcome to P2P · Badin</div><h1>Good Food.<br><span style="color:#ff7845">Good Times.</span></h1><p>Find P2P Pizza2Potato on Hyderabad - Badin Road. Contact the restaurant for current menu options and details.</p><a class="btn" href="#visit">Find Our Location</a></div><img class="photo" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=85" alt="Pizza food photograph"></div></section>
-<div class="quick"><div class="wrap quickGrid"><div><strong>📍 Badin, Sindh</strong><br>Hyderabad - Badin Road</div><div><strong>🕑 Listed closing time: 2 AM</strong><br>Confirm current hours by phone</div><div><strong>🍽️ Outdoor seating</strong><br>Kids' menu listed on Google</div></div></div>
-<section id="menu"><div class="wrap"><div class="head"><div class="eyebrow" style="color:#df5d2c">Food & menu</div><h2>Explore Our Menu</h2><p class="muted">For today's menu, availability and prices, please contact the restaurant directly.</p></div><div class="menuBox"><div style="font-size:48px">🍕 🍟</div><h3>Ask about the menu</h3><p>Menu items and prices have not yet been confirmed for this demo website.</p><a class="btn" href="tel:+92297870606">Call: 0297 870606</a></div></div></section>
-<section id="visit" style="background:#f2e6d9"><div class="wrap"><div class="head"><div class="eyebrow" style="color:#df5d2c">Visit us</div><h2>Find P2P Pizza2Potato</h2></div><div class="infoGrid"><div class="info"><h3>📍 Restaurant address</h3><p>MR5J+P6C, Hyderabad - Badin Road, Badin. Located in Nadeem CNG Station.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=P2P+Pizza2Potato+Badin">Get Directions ↗</a></div><div class="info"><h3>☎ Contact</h3><p>Call the restaurant for menu, current opening hours and other information.</p><a href="tel:+92297870606">0297 870606</a></div></div><iframe class="map" title="P2P Pizza2Potato map" src="https://maps.google.com/maps?q=P2P%20Pizza2Potato%20Badin&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe></div></section>
-</main><footer><div class="wrap"><strong>P2P Pizza2Potato · Badin</strong><p>Restaurant website demonstration. Business details should be confirmed with the owner before official publication.</p></div></footer>
-</body></html>
+<section class="hero" id="home">
+ <div class="wrap heroGrid">
+  <div>
+   <div class="kicker">Fresh taste • Big flavours • Badin</div>
+   <h1>GOOD FOOD.<br><span>GREAT MOOD.</span></h1>
+   <p>Pizza, burgers, BBQ, karahi, platters and much more. Explore the P2P Pizza2Potato menu and call us for takeaway or home delivery.</p>
+   <div class="actions"><a class="btn primary" href="#menu">EXPLORE MENU ↓</a><a class="btn outline" href="tel:+92297870606">☎ CALL RESTAURANT</a></div>
+  </div>
+  <div class="heroVisual">
+   <img src="images/p2p-menu-pizza-burgers.webp" alt="P2P Pizza2Potato menu featuring pizza, burgers, pasta and more">
+   <div class="heroStamp">P2P · BADIN</div>
+  </div>
+ </div>
+</section>
+<div class="highlights"><div class="wrap highlightGrid">
+ <div class="highlight"><strong>🍕 PIZZA & BURGERS</strong><span>Fresh favourites for everyone</span></div>
+ <div class="highlight"><strong>🔥 BBQ & KARAHI</strong><span>Full of flavour</span></div>
+ <div class="highlight"><strong>🛵 HOME DELIVERY</strong><span>Call to place your order</span></div>
+</div></div>
+
+<section class="menuSection" id="menu">
+ <div class="wrap">
+  <div class="sectionHead"><div class="kicker">Take a look</div><h2>OUR MENU</h2><p>Browse the restaurant's menu boards below. Tap an image to open it larger and zoom in to read the items and prices.</p></div>
+  <div class="menuGrid">
+   <article class="menuCard">
+    <a href="images/p2p-menu-main.webp" target="_blank" rel="noopener"><img src="images/p2p-menu-main.webp" alt="P2P Pizza2Potato menu with BBQ, karahi, handi, platters, deals, ice cream and drinks"></a>
+    <div class="menuCaption">BBQ · KARAHI · PLATTERS <span>OPEN / ZOOM ↗</span></div>
+   </article>
+   <article class="menuCard">
+    <a href="images/p2p-menu-pizza-burgers.webp" target="_blank" rel="noopener"><img src="images/p2p-menu-pizza-burgers.webp" alt="P2P Pizza2Potato menu with pizza, burgers, broast, fries, sandwiches, pasta and biryani"></a>
+    <div class="menuCaption">PIZZA · BURGERS · MORE <span>OPEN / ZOOM ↗</span></div>
+   </article>
+  </div>
+  <p class="zoomNote">Menu images and prices are displayed as supplied by the restaurant. Please call to confirm current availability and prices.</p>
+ </div>
+</section>
+
+<section class="deals" id="deals">
+ <div class="wrap">
+  <div class="sectionHead"><div class="kicker">Share more, save more</div><h2>SPECIAL DEALS</h2><p>Popular combo offers shown on the supplied menu. Call to confirm availability before ordering.</p></div>
+  <div class="dealGrid">
+   <article class="deal"><span class="dealLabel">DEAL 01</span><h3>Pizza Combo</h3><p>1 Small Pizza, 2 Bar BQ Rolls and 1 Ltr Cold Drink.</p><strong>Rs. 1,100</strong><a href="tel:+92297870606">ORDER BY PHONE ↗</a></article>
+   <article class="deal"><span class="dealLabel">DEAL 02</span><h3>Zinger Combo</h3><p>2 Zinger Burgers, 2 Bar BQ Rolls and 1 Ltr Cold Drink.</p><strong>Rs. 1,500</strong><a href="tel:+92297870606">ORDER BY PHONE ↗</a></article>
+   <article class="deal"><span class="dealLabel">DEAL 03</span><h3>Family Combo</h3><p>3 Zinger Burgers, 3 Drumsticks & Thigh, 1 Fries and 1.5 Ltr Cold Drink.</p><strong>Rs. 2,200</strong><a href="tel:+92297870606">ORDER BY PHONE ↗</a></article>
+   <article class="deal"><span class="dealLabel">DEAL 04</span><h3>Pizza & Burger</h3><p>1 Medium Pizza, 2 Zinger Burgers, 2 Bar BQ Rolls and 1 Ltr Cold Drink.</p><strong>Rs. 2,400</strong><a href="tel:+92297870606">ORDER BY PHONE ↗</a></article>
+   <article class="deal"><span class="dealLabel">DEAL 05</span><h3>Party Combo</h3><p>1 Large Pizza, 1 Pasta, 12 Wings and 1.5 Ltr Cold Drink.</p><strong>Rs. 2,500</strong><a href="tel:+92297870606">ORDER BY PHONE ↗</a></article>
+   <article class="deal"><span class="dealLabel">DEAL 06</span><h3>Big Family Deal</h3><p>6 Zinger Burgers, 8 Drumsticks & Thigh, 6 Bar BQ Rolls and 1.5 Ltr Cold Drink.</p><strong>Rs. 5,500</strong><a href="tel:+92297870606">ORDER BY PHONE ↗</a></article>
+  </div>
+ </div>
+</section>
+
+<section class="info" id="visit">
+ <div class="wrap">
+  <div class="sectionHead"><div class="kicker">Come hungry</div><h2>VISIT OR CALL US</h2><p>Find P2P Pizza2Potato on Court Road, Badin.</p></div>
+  <div class="infoGrid">
+   <div class="infoCard"><h3>📍 OUR LOCATION</h3><p>Nadeem CNG & Petroleum Service, opposite Model Police Station, Court Road, Badin, Sindh.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=P2P+Pizza2Potato+Court+Road+Badin">GET DIRECTIONS ↗</a></div>
+   <div class="infoCard"><h3>☎ CALL FOR ORDERS</h3><p>For delivery, takeaway, menu availability and current prices:</p>
+    <div class="contactNumbers">
+     <a href="tel:+92297870606">0297-870606</a>
+     <a href="tel:+923173235551">0317-3235551</a>
+     <a href="tel:+923338567547">0333-8567547</a>
+     <a href="tel:+923415675547">0341-8567547</a>
+    </div>
+   </div>
+  </div>
+  <iframe class="map" title="Map showing P2P Pizza2Potato in Badin" src="https://maps.google.com/maps?q=P2P%20Pizza2Potato%20Court%20Road%20Badin&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="wrap"><h2>CRAVING SOMETHING DELICIOUS?</h2><p>Call P2P Pizza2Potato and place your order today.</p><a class="btn" href="tel:+92297870606">☎ CALL NOW · 0297-870606</a></div>
+</section>
+</main>
+<footer><div class="wrap"><strong>P2P PIZZA2POTATO · BADIN</strong><p>Restaurant menu and contact information. Please confirm prices and availability directly with the restaurant.</p></div></footer>
+<a class="floatOrder" href="tel:+92297870606">☎ ORDER NOW</a>
+<script>
+const toggle=document.getElementById('toggle'),links=document.getElementById('navlinks');
+toggle.addEventListener('click',()=>{const open=links.classList.toggle('show');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕':'☰';});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('show');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰';}));
+</script>
+</body>
+</html>
