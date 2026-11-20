@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>Bright Business | Websites That Grow Your Business</title>
+<meta name="description" content="Bright Business creates modern, mobile-friendly websites for shops, restaurants, small businesses and personal brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#101827;--navy2:#17243a;--blue:#3478f6;--cyan:#67d4e8;--gold:#f3b84b;--ink:#172033;--muted:#667085;--paper:#f6f8fc;--white:#fff;--line:#e7ebf2}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}a{text-decoration:none;color:inherit}.wrap{width:min(1160px,90%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:#101827f2;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff18;color:white}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font:800 23px Manrope,sans-serif;letter-spacing:-1px}.brand b{color:var(--gold)}.navlinks{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:700}.navlinks a:hover{color:var(--cyan)}.navcta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:12px 19px;font-weight:800;transition:.2s}.navcta,.primary{background:var(--blue);color:white}.btn:hover,.navcta:hover{transform:translateY(-2px);filter:brightness(1.06)}.toggle{display:none;background:none;border:0;color:white;font-size:27px}
+.hero{background:radial-gradient(circle at 80% 25%,#3478f644,transparent 30%),linear-gradient(125deg,#101827,#1b2d49);color:white;overflow:hidden}.heroGrid{min-height:620px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:48px;padding:80px 0}.kicker{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase}.hero h1{font:800 clamp(43px,6vw,72px)/1.08 Manrope,sans-serif;letter-spacing:-2.5px;margin:18px 0}.hero h1 span{color:var(--cyan)}.hero p{max-width:560px;color:#c5d0e0;font-size:17px;margin-bottom:28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.secondary{border:1px solid #ffffff55;color:white}.heroVisual{position:relative;min-height:420px;display:grid;place-items:center}.mock{width:min(100%,490px);background:#f8fbff;color:#15223a;border-radius:24px;padding:22px;box-shadow:0 35px 90px #0007;transform:rotate(2deg)}.mockTop{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.mockLogo{font:800 18px Manrope}.mockLogo span{color:var(--blue)}.mockTag{font-size:10px;background:#e8f1ff;color:#2461ce;padding:6px 10px;border-radius:30px;font-weight:800}.mockBanner{border-radius:16px;padding:28px 22px;background:linear-gradient(120deg,#182944,#3478f6);color:white;min-height:185px;display:flex;flex-direction:column;justify-content:center}.mockBanner small{color:#aeefff;font-weight:800;letter-spacing:2px}.mockBanner strong{font:800 30px/1.1 Manrope;margin:10px 0}.mockCards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:13px}.mockCard{background:#edf2fa;border-radius:12px;padding:16px 8px;text-align:center;font-size:11px;font-weight:800}.floatBadge{position:absolute;right:-5px;bottom:22px;background:var(--gold);color:#182033;padding:13px 17px;border-radius:14px;font-weight:800;box-shadow:0 12px 35px #0004}
+.trust{background:white;border-bottom:1px solid var(--line)}.trustGrid{display:grid;grid-template-columns:repeat(3,1fr);padding:23px 0;text-align:center}.trustItem+ .trustItem{border-left:1px solid var(--line)}.trustItem strong{display:block;font:800 19px Manrope}.trustItem span{font-size:12px;color:var(--muted)}
+section{padding:88px 0}.sectionHead{text-align:center;max-width:700px;margin:0 auto 42px}.sectionHead .kicker{color:var(--blue)}.sectionHead h2{font:800 clamp(31px,4vw,45px)/1.15 Manrope;letter-spacing:-1.3px;margin:12px 0}.sectionHead p{color:var(--muted)}
+.services{background:var(--paper)}.serviceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:white;border:1px solid var(--line);border-radius:18px;padding:27px;box-shadow:0 8px 28px #1c31500a}.serviceIcon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:#eaf1ff;font-size:23px;margin-bottom:17px}.service h3{font:800 18px Manrope;margin-bottom:8px}.service p{color:var(--muted);font-size:14px}.service small{display:block;color:var(--blue);font-weight:800;margin-top:15px}
+
+.pricing{background:#f6f8fc}
+.pricingGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.priceCard{position:relative;background:white;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 10px 32px #1b2a420c;display:flex;flex-direction:column}
+.priceCard.featured{border:2px solid var(--blue);box-shadow:0 16px 42px #3478f620}
+.priceFlag{display:inline-block;align-self:flex-start;background:#eaf1ff;color:#2461ce;padding:5px 10px;border-radius:30px;font-size:11px;font-weight:800;margin-bottom:12px}
+.priceCard h3{font:800 20px Manrope;margin-bottom:5px}
+.priceIntro{color:var(--muted);font-size:13px;min-height:42px}
+.priceAmount{font:800 42px/1.2 Manrope;letter-spacing:-1.5px;margin:17px 0 3px;color:var(--navy)}
+.priceAmount small{font:600 12px "DM Sans",sans-serif;letter-spacing:0;color:var(--muted)}
+.priceNote{font-size:12px;color:var(--muted);margin-bottom:17px}
+.priceList{list-style:none;margin:0 0 24px;flex:1}
+.priceList li{font-size:13px;padding:8px 0;border-bottom:1px solid var(--line);color:#344054}
+.priceList li:before{content:"✓";color:#16845b;font-weight:800;margin-right:9px}
+.priceCard .btn{width:100%;font-size:13px}
+.pricingFoot{text-align:center;color:var(--muted);font-size:12px;margin:24px auto 0;max-width:760px}
+@media(max-width:800px){.pricingGrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.pricingGrid{grid-template-columns:1fr}.priceIntro{min-height:0}}
+
+.portfolio{background:white}.projectGrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.project{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:white;box-shadow:0 12px 34px #1b2a420c}.projectArt{height:225px;display:flex;align-items:center;justify-content:center;padding:25px;color:white;text-align:center}.pizzaArt{background:linear-gradient(135deg,#351b15,#c54d25)}.cosmeticArt{background:linear-gradient(135deg,#7d435d,#e8b8bf);color:#351e2a}.projectArt .artText{font:800 32px/1.12 Manrope;max-width:340px}.projectBody{padding:25px}.projectType{font-size:11px;color:var(--blue);font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.projectBody h3{font:800 22px Manrope;margin:7px 0}.projectBody p{color:var(--muted);font-size:14px;margin-bottom:18px}.projectActions{display:flex;gap:10px;flex-wrap:wrap}.projectActions a{font-size:13px;padding:10px 14px;border-radius:10px;font-weight:800}.projectLink{background:var(--navy);color:white}.externalLink{border:1px solid var(--line)}
+.process{background:#edf3fb}.processGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{background:white;border-radius:16px;padding:23px}.stepNum{font:800 28px Manrope;color:var(--blue)}.step h3{font:800 16px Manrope;margin:7px 0}.step p{font-size:13px;color:var(--muted)}
+.aboutGrid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.aboutPanel{background:var(--navy);color:white;border-radius:22px;padding:35px}.aboutPanel h3{font:800 27px Manrope;margin-bottom:12px}.aboutPanel p{color:#c5d0e0}.aboutText h2{font:800 39px/1.15 Manrope;margin:12px 0}.aboutText p{color:var(--muted);margin-bottom:15px}
+.contact{background:linear-gradient(120deg,#101827,#1c3151);color:white}.contactGrid{display:grid;grid-template-columns:1fr .8fr;gap:40px;align-items:center}.contact h2{font:800 clamp(34px,4vw,48px)/1.12 Manrope;margin:12px 0}.contact p{color:#c5d0e0;max-width:560px;margin-bottom:22px}.contactBox{background:white;color:var(--ink);padding:27px;border-radius:18px}.contactBox h3{font:800 20px Manrope;margin-bottom:8px}.contactBox p{color:var(--muted);font-size:14px;margin-bottom:16px}.contactBox a{display:block;text-align:center;margin-top:10px}
+footer{background:#0b1220;color:white;padding:38px 0 20px}.footerTop{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-bottom:25px}.footerTop p{color:#9eacc0;max-width:420px;font-size:14px;margin-top:9px}.footerLinks{display:flex;gap:20px;flex-wrap:wrap;font-size:13px}.footerLinks a:hover{color:var(--cyan)}.copyright{border-top:1px solid #ffffff20;padding-top:18px;text-align:center;color:#8290a4;font-size:12px}
+.whatsapp{position:fixed;right:20px;bottom:20px;z-index:40;background:#20bd69;color:white;border-radius:50px;padding:13px 18px;font-weight:800;box-shadow:0 8px 25px #0003}
+@media(max-width:800px){.toggle{display:block}.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#101827;flex-direction:column;align-items:stretch;padding:22px 5%;gap:18px}.navlinks.show{display:flex}.navcta{text-align:center}.heroGrid{grid-template-columns:1fr;padding:65px 0}.heroVisual{min-height:330px}.mock{max-width:450px}.serviceGrid{grid-template-columns:repeat(2,1fr)}.processGrid{grid-template-columns:repeat(2,1fr)}.contactGrid{grid-template-columns:1fr}.aboutGrid{grid-template-columns:1fr}}
+@media(max-width:560px){section{padding:65px 0}.hero h1{letter-spacing:-1.5px}.trustGrid{grid-template-columns:1fr;gap:13px}.trustItem+.trustItem{border:0;border-top:1px solid var(--line);padding-top:13px}.serviceGrid,.projectGrid,.processGrid{grid-template-columns:1fr}.projectArt{height:190px}.aboutText h2{font-size:32px}.whatsapp{right:12px;bottom:12px}.footerLinks{gap:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G4N1ECE6E3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G4N1ECE6E3');
+</script>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home">Bright <b>Business.</b></a>
+<button class="toggle" id="toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav class="navlinks" id="navlinks">
+<a href="#home">Home</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a>
+<a class="navcta" href="https://wa.me/923233955776?text=Hello%20Bright%20Business%2C%20I%20need%20a%20website.">Get a Quote</a>
+</nav></div></header>
+<main>
+<section class="hero" id="home"><div class="wrap heroGrid">
+<div><div class="kicker">Web design • Digital presence • Growth</div>
+<h1>Turn your business into a <span>brand online.</span></h1>
+<p>Modern, mobile-friendly websites for restaurants, shops, small businesses and personal brands. Let's build a professional online presence for your next stage of growth.</p>
+<div class="actions"><a class="btn primary" href="#portfolio">Explore Our Work</a><a class="btn secondary" href="https://wa.me/923233955776?text=Hello%20Bright%20Business%2C%20I%20want%20to%20discuss%20a%20website.">Chat on WhatsApp ↗</a></div>
+</div>
+<div class="heroVisual"><div class="mock"><div class="mockTop"><div class="mockLogo">Bright<span>Business.</span></div><div class="mockTag">YOUR ONLINE PRESENCE</div></div><div class="mockBanner"><small>BUILD • CONNECT • GROW</small><strong>A better website<br>starts here.</strong><span>Designed around your business.</span></div><div class="mockCards"><div class="mockCard">✦<br>Modern</div><div class="mockCard">▣<br>Responsive</div><div class="mockCard">↗<br>Business-ready</div></div></div><div class="floatBadge">Your idea. Our design.</div></div>
+</div></section>
+<div class="trust"><div class="wrap trustGrid"><div class="trustItem"><strong>Mobile-first</strong><span>Designed for phone users</span></div><div class="trustItem"><strong>Custom approach</strong><span>Built around your requirements</span></div><div class="trustItem"><strong>Direct support</strong><span>Discuss your project on WhatsApp</span></div></div></div>
+<section class="services" id="services"><div class="wrap"><div class="sectionHead"><div class="kicker">What we do</div><h2>Websites made for your goals</h2><p>From a simple business profile to a complete online store, we'll discuss the right solution for your needs.</p></div>
+<div class="serviceGrid">
+<div class="service"><div class="serviceIcon">🍽️</div><h3>Restaurant Websites</h3><p>Showcase your restaurant, menu, location, timings and contact information.</p><small>Custom quote</small></div>
+<div class="service"><div class="serviceIcon">🏪</div><h3>Business & Shop Websites</h3><p>Present your services, products, business details and customer contact options.</p><small>Custom quote</small></div>
+<div class="service"><div class="serviceIcon">👤</div><h3>Portfolio & CV Websites</h3><p>Build a professional online profile to highlight your skills and work.</p><small>Custom quote</small></div>
+<div class="service"><div class="serviceIcon">🛍️</div><h3>Online Store Websites</h3><p>Discuss product pages, categories and the online shopping experience you need.</p><small>Custom quote</small></div>
+<div class="service"><div class="serviceIcon">📱</div><h3>Responsive Design</h3><p>Layouts designed to work across mobile phones, tablets and desktop screens.</p><small>Included as required</small></div>
+<div class="service"><div class="serviceIcon">⚙️</div><h3>Website Updates</h3><p>Improve an existing website's layout, content and presentation.</p><small>Custom quote</small></div>
+</div></div></section>
+
+<section class="pricing" id="pricing"><div class="wrap">
+<div class="sectionHead"><div class="kicker">Simple, transparent packages</div><h2>Website packages for every stage</h2><p>Choose a starting package. We'll confirm the final scope, timeline and price with you before work begins.</p></div>
+<div class="pricingGrid">
+<article class="priceCard">
+<div class="priceFlag">STARTER</div><h3>Starter Website</h3><p class="priceIntro">A clean online presence for individuals and small businesses.</p>
+<div class="priceAmount">$149</div><div class="priceNote">One-time starting price</div>
+<ul class="priceList"><li>1–3 website pages</li><li>Mobile-friendly responsive design</li><li>Contact form and WhatsApp button</li><li>Basic SEO setup</li><li>1 revision</li><li>Estimated delivery: 5–7 days</li></ul>
+<a class="btn primary" href="https://wa.me/923233955776?text=Hello%20Bright%20Business%2C%20I%20am%20interested%20in%20the%20Starter%20Website%20package%20($149).">Choose Starter</a>
+</article>
+<article class="priceCard featured">
+<div class="priceFlag">MOST POPULAR</div><h3>Business Website</h3><p class="priceIntro">A polished multi-page website for a growing business or brand.</p>
+<div class="priceAmount">$299</div><div class="priceNote">One-time starting price</div>
+<ul class="priceList"><li>Up to 5 website pages</li><li>Professional custom design</li><li>Contact form and social links</li><li>Basic SEO setup</li><li>Google Maps integration</li><li>2 revisions</li><li>Estimated delivery: 7–10 days</li></ul>
+<a class="btn primary" href="https://wa.me/923233955776?text=Hello%20Bright%20Business%2C%20I%20am%20interested%20in%20the%20Business%20Website%20package%20($299).">Choose Business</a>
+</article>
+<article class="priceCard">
+<div class="priceFlag">ADVANCED</div><h3>Premium Website</h3><p class="priceIntro">A feature-rich website for businesses with broader requirements.</p>
+<div class="priceAmount">$599</div><div class="priceNote">One-time starting price</div>
+<ul class="priceList"><li>Up to 10 website pages</li><li>Advanced design and animations</li><li>Blog or booking functionality</li><li>SEO and speed optimisation</li><li>3 revisions</li><li>Estimated delivery: 2–3 weeks</li></ul>
+<a class="btn primary" href="https://wa.me/923233955776?text=Hello%20Bright%20Business%2C%20I%20am%20interested%20in%20the%20Premium%20Website%20package%20($599).">Choose Premium</a>
+</article>
+</div>
+<p class="pricingFoot">Prices are introductory starting rates in USD. Final pricing depends on the agreed requirements. Domain, hosting, paid themes/plugins, ecommerce features and other third-party costs are quoted separately. A 50% advance is required to begin a project; the balance is due before final handover.</p>
+</div></section>
+
+<section class="portfolio" id="portfolio"><div class="wrap"><div class="sectionHead"><div class="kicker">Selected work</div><h2>Explore our website demos</h2><p>See examples of different website styles and business needs.</p></div>
+<div class="projectGrid">
+<article class="project"><div class="projectArt pizzaArt"><div class="artText">P2P<br>Pizza2Potato</div></div><div class="projectBody"><div class="projectType">Restaurant website demo</div><h3>P2P Pizza2Potato · Badin</h3><p>A restaurant-style demo featuring location, contact details and a menu information section.</p><div class="projectActions"><a class="projectLink" href="p2p.html">View Website Demo ↗</a></div></div></article>
+<article class="project"><div class="projectArt cosmeticArt"><div class="artText">HADIR HUSSAIN<br>COSMETICS</div></div><div class="projectBody"><div class="projectType">WordPress website demo</div><h3>Hadir Hussain Cosmetics</h3><p>A cosmetics and beauty-focused WordPress website project.</p><div class="projectActions"><a class="projectLink" href="https://msulleman345-pvyot.wordpress.com/" target="_blank" rel="noopener">View WordPress Demo ↗</a></div></div></article>
+</div></div></section>
+<section class="process"><div class="wrap"><div class="sectionHead"><div class="kicker">Simple process</div><h2>From idea to website</h2><p>A clear process helps us understand what your business needs.</p></div><div class="processGrid">
+<div class="step"><div class="stepNum">01</div><h3>Tell us your idea</h3><p>Share your business type, goals and website requirements.</p></div>
+<div class="step"><div class="stepNum">02</div><h3>Discuss the plan</h3><p>We discuss pages, features, timeline and project pricing.</p></div>
+<div class="step"><div class="stepNum">03</div><h3>Design & build</h3><p>Your website is prepared according to the agreed requirements.</p></div>
+<div class="step"><div class="stepNum">04</div><h3>Review & launch</h3><p>Review the work and discuss publishing and next steps.</p></div>
+</div></div></section>
+<section id="about"><div class="wrap aboutGrid"><div class="aboutText"><div class="kicker">About Bright Business</div><h2>Practical websites for growing businesses.</h2><p>Bright Business is a web design initiative by Hadir Hussain, focused on creating clear, attractive and responsive websites for businesses and individuals.</p><p>Every project is discussed according to its requirements. Final pricing depends on the pages, features and scope of work.</p><a class="btn primary" href="https://wa.me/923233955776?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20website%20project.">Discuss Your Project</a></div><div class="aboutPanel"><h3>Let's make your business easier to discover.</h3><p>Whether you run a restaurant, shop, service business or personal brand, a professional website can help customers learn about you and contact you.</p></div></div></section>
+<section class="contact" id="contact"><div class="wrap contactGrid"><div><div class="kicker">Let's work together</div><h2>Ready to build your website?</h2><p>Tell us what kind of website you need. We'll discuss your requirements and suggest a suitable approach.</p><a class="btn primary" href="https://wa.me/923233955776?text=Hello%20Bright%20Business%2C%20I%20am%20interested%20in%20a%20website.">Start a WhatsApp Chat ↗</a></div><div class="contactBox"><h3>Bright Business</h3><p>Web design by Hadir Hussain</p><a class="btn primary" href="https://wa.me/923233955776">WhatsApp: +92 323 3955776</a><a class="btn externalLink" href="mailto:">Email us (add your email)</a></div></div></section>
+</main>
+<footer><div class="wrap"><div class="footerTop"><div><a class="brand" href="#home">Bright <b>Business.</b></a><p>Professional website design for businesses, shops, restaurants and personal brands.</p></div><div class="footerLinks"><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a></div></div><div class="copyright">© <span id="year"></span> Bright Business · Hadir Hussain. All rights reserved.</div></div></footer>
+<a class="whatsapp" href="https://wa.me/923233955776?text=Hello%20Bright%20Business%2C%20I%20need%20a%20website." aria-label="Chat with Bright Business on WhatsApp">WhatsApp ↗</a>
+<script>
+const toggle=document.getElementById('toggle'),links=document.getElementById('navlinks');
+toggle.addEventListener('click',()=>{const open=links.classList.toggle('show');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕':'☰';});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('show');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
